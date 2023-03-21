@@ -57,8 +57,6 @@ while [[ $flag -ne 0 ]]
 				esac
 	
 	done	
-main
-
 }
 
 function main () {
