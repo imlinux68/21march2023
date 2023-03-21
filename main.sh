@@ -35,7 +35,8 @@ rm -rvf ~/Cloud
 }
 
 function scriptU () {
-while :
+flag=1
+while [[ $flag -ne 0 ]]
 	do
 		echo -e "\n\n\n***************************"
 		echo          "***************************"
@@ -51,11 +52,12 @@ while :
 					1) uname -a ;;
 					2) sudo pacman -Syu ;;
 					3) shutdown -r now ;;
-					4) main ;;
+					4) flag=0 ;;
 					*) echo "Enter nums from 1 to 4 ONLY!" ; sleep 3 ;;
 				esac
-
-	done
+	
+	done	
+main
 
 }
 
